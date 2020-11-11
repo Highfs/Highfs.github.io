@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+    <script type="text/javascript"
+        src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/anhui.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/aomen.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/beijing.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/chongqing.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/fujian.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/gansu.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/guangdong.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/guangxi.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/guizhou.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/hainan.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/hebei.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/heilongjiang.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/henan.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/hubei.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/hunan.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/jiangsu.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/jiangxi.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/jilin.js"></script>
+    <script type="text/javascript" src="../echartsPrograme/node_modules/echarts/map/js/province/liaoning.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/neimenggu.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/ningxia.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/qinghai.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/shandong.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/shanghai.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/shanxi1.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/sichuan.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/taiwan.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/tianjin.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/xianggang.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/xinjiang.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/xizang.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/yunnan.js"></script>
+    <script type="text/javascript" src="https://echarts.apache.org/examples/vendors/echarts/map/js/province/zhejiang.js"></script>
+
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+    <script type="text/javascript"
+        src="https://api.map.baidu.com/api?v=2.0&ak=4RhFeKS5FeoF44PlgaWf4b29pM9mzlkl"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+    <script type="text/javascript" src="../echartsPrograme/node_modules/jquery/dist/jquery.js"></script>
+</head>
+
+<body style="height: 100%; margin: 0">
+    <style type="text/css">
+        .anchorBL {
+            display: none
+        }
+    </style>
+    <div>年份
+        <select id="year_data">
+            <option value="0">总和</option>
+            <option value="2010">2010年</option>
+            <option value="2011">2011年</option>
+            <option value="2012">2012年</option>
+            <option value="2013">2013年</option>
+            <option value="2014">2014年</option>
+            <option value="2015">2015年</option>
+            <option value="2016">2016年</option>
+            <option value="2017">2017年</option>
+        </select>
+        <button id="Geoback">返回</button>
+    </div>
+    <div id="container" style="height: 100%"></div>
+    <script type="text/javascript" src="./text.js"></script>
+    <script>
+        $(function () {
+            $("#year_data").on('click', function () {
+                if ($('#year_data').val() == 0) {
+                    myChart.clear();
+                    geoData(0);
+                }
+                if ($('#year_data').val() == 2010) {
+                    myChart.clear();
+                    geoData(2010);
+                }
+
+                if ($('#year_data').val() == 2011) {
+                    myChart.clear()
+                    geoData(2011);
+                }
+
+                if ($('#year_data').val() == 2012) {
+                    myChart.clear()
+                    geoData(2012);
+                }
+
+                if ($('#year_data').val() == 2013) {
+                    myChart.clear()
+                    geoData(2013);
+                }
+
+                if ($('#year_data').val() == 2014) {
+                    myChart.clear()
+                    geoData(2014);
+                }
+
+                if ($('#year_data').val() == 2015) {
+                    myChart.clear()
+                    geoData(2015);
+                }
+
+                if ($('#year_data').val() == 2016) {
+                    myChart.clear()
+                    geoData(2016);
+                }
+
+                if ($('#year_data').val() == 2017) {
+                    myChart.clear()
+                    geoData(2017);
+                }
+            })
+            $('#Geoback').on('click',function(){
+                myChart.clear()
+                setName('china')
+            })
+        })
+    </script>
+</body>
+
+</html>
