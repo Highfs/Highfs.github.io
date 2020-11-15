@@ -580,7 +580,7 @@
 	<script>
 		geoData(0)
 		$(function () {
-			$("#year_data").on('touchstart', function () {
+			$("#year_data").on('touchend', function () {
 				if ($('#year_data').val() == 0) {
 					myChart.clear();
 					geoData(0);
